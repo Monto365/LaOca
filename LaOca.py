@@ -9,5 +9,7 @@ class JuegoOca:
         self.players.append(player)
         return self.players
 
-    def move_player(self, player1, dice0, dice1):
-        return "Sara rolls 4, 2. Sara moves from Start to 6"
+    def move_player(self, player, dice0, dice1):
+        return player + " rolls " + str(dice0) + ", " + str(dice1) + ". " + player + " moves from Start to " + str(dice0+dice1)
+
+

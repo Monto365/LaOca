@@ -59,6 +59,22 @@ class TestJuegoOca(unittest.TestCase):
         # Assert
         self.assertEqual(expected, result)
 
+    def test_move_player2(self):
+        # Arrange
+        juego_oca = JuegoOca()
+        player1 = "Sara"
+        juego_oca.add_player(player1)
+        player2 = "Juan"
+        juego_oca.add_player(player2)
+
+        expected = "Juan rolls 2, 2. Juan moves from Start to 4"
+
+        # Act
+        result = juego_oca.move_player(player2, 2, 2)
+
+        # Assert
+        self.assertEqual(expected, result)
+
 
 if __name__ == '__main__':
     unittest.main()
