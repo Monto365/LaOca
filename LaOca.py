@@ -1,10 +1,7 @@
-
-
 class JuegoOca:
     def __init__(self):
-        self.players=[]
-        self.positions=[]
-
+        self.players = []
+        self.positions = []
 
     def add_player(self, player):
         if player in self.players:
@@ -15,7 +12,9 @@ class JuegoOca:
         return self.players
 
     def move_player(self, player, dice0, dice1):
-        to_str = player + " rolls " + str(dice0) + ", " + str(dice1) + ". " + player + " moves from " + self.get_position(player) + " to " + str(dice0 + dice1 + self.positions[self.players.index(player)])
+        to_str = player + " rolls " + str(dice0) + ", " + str(
+            dice1) + ". " + player + " moves from " + self.get_position(player) + " to " + str(
+            dice0 + dice1 + self.positions[self.players.index(player)])
 
         self.positions[self.players.index(player)] = dice0 + dice1
 
@@ -24,9 +23,8 @@ class JuegoOca:
 
         return to_str
 
-    def get_position(self,player):
+    def get_position(self, player):
         result = self.positions[self.players.index(player)]
         if result == 0:
             return "Start"
         return str(result)
-
